@@ -1,0 +1,99 @@
+.picto-weather{
+    width: calc(196px / 2);
+    height: calc(197px / 2);
+    background-image: url("../img/pictos-weather.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: cover;
+
+}
+
+.picto-thunder{
+    background-position: 0 0;
+}
+.picto-rain{
+    background-position: 0 calc(-199px / 2);
+}
+.picto-suncloud{
+    background-position: 0 calc(-397px / 2);
+}
+.picto-cloud{
+    background-position: 0 calc(-596px / 2);
+}
+.picto-wind{
+    background-position: 0 calc(-795px / 2);
+}
+.picto-sun{
+     background-position: 0 calc(-994px / 2);
+}
+.picto-snow{
+   background-position: 0 calc(-1193px / 2);
+}
+
+/*DAYNIGHT*/
+.daynight-picto{
+    display: inline-block;
+    width: 96px;
+    height: 96px;
+    background-image:url("../img/daynight-pictos.png");
+}
+.day{
+    background-position: 0 0;
+}
+.night{
+    background-position: -116px 0;
+}
+
+/*MINIPICTOS*/
+.minipicto{
+    display: inline-block;
+    width: calc(96px / 2);
+    height: calc(96px / 2);
+    background-image:url("../img/minipictos.png");
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.minipicto-cloud{
+    background-position: 0 0;
+}
+.minipicto-sun{
+    background-position: calc(-116px / 2) 0;
+}
+.minipicto-rain{
+    background-position: calc(-232px / 2) 0;
+}
+
+.minipicto-suncloud{
+    background-position: calc(-348px / 2) 0;
+}
+.minipicto-thunder{
+    background-position: calc(-464px / 2) 0;
+}
+
+.minipicto-snow{
+    background-position: calc(-580px / 2) 0;
+}
+
+.bg-weather{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.bg-weather-sun{
+    background-image: url("../img/sun.jpg");
+}
+.bg-weather-suncloud{
+    background-image: url("../img/suncloud.jpg");
+}
+.bg-weather-cloud{
+    background-image: url("../img/cloud.jpg");
+}
+.bg-weather-rain{
+    background-image: url("../img/rain.jpg");
+}
+.bg-weather-snow{
+    background-image: url("../img/snow.jpg");   
+}
+.bg-weather-thunder{
+    background-image: url("../img/thunder.jpg");
+}

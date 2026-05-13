@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body.bg-weather {
+  min-height: 100vh;
+ /* background: linear-gradient(135deg, #1a2a4a 0%, #2d4a7a 40%, #1a3d6e 70%, #0f2340 100%);*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  padding: 2rem;
+}
+
+/* ── Carte principale ── */
+.container {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 32px;
+  padding: 2.5rem 2rem 2rem;
+  color: #fff;
+  box-shadow:
+    0 24px 64px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+h3#city{
+    text-align: center;
+}
+/* ── Date & heure ── */
+.datetime {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.datetime h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.datetime h3 {
+  font-size: 3.5rem;
+  font-weight: 200;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-top: 0.25rem;
+  color: #fff;
+}
+
+/* ── Météo courante ── */
+.current {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.current .tmax {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+.current .tmin {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ── Prévisions journalières ── */
+.dayly {
+  overflow: hidden;
+}
+
+.carousel-daily-container {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: none;
+}
+
+.carousel-daily-container::-webkit-scrollbar {
+  display: none;
+}
+
+.dayly-weather {
+  flex: 0 0 auto;
+  min-width: 90px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 1rem 0.75rem;
+  text-align: center;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.dayly-weather:hover {
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateY(-3px);
+}
+
+.dayly-weather h4 {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+/*----------------------------------------
+PICTOGRAMMES
+----------------------------------------*/
+.picto-weather{
+    width: calc(196px / 2);
+    height: calc(197px / 2);
+    background-image: url("../img/pictos-weather.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: cover;
+
+}
+
+.picto-thunder{
+    background-position: 0 0;
+}
+.picto-rain{
+    background-position: 0 calc(-199px / 2);
+}
+.picto-suncloud{
+    background-position: 0 calc(-397px / 2);
+}
+.picto-cloud{
+    background-position: 0 calc(-596px / 2);
+}
+.picto-wind{
+    background-position: 0 calc(-795px / 2);
+}
+.picto-sun{
+     background-position: 0 calc(-994px / 2);
+}
+.picto-snow{
+   background-position: 0 calc(-1193px / 2);
+}
+
+/*DAYNIGHT*/
+.daynight-picto{
+    display: inline-block;
+    width: 96px;
+    height: 96px;
+    background-image:url("../img/daynight-pictos.png");
+}
+.day{
+    background-position: 0 0;
+}
+.night{
+    background-position: -116px 0;
+}
+
+/*MINIPICTOS*/
+.minipicto{
+    display: inline-block;
+    width: calc(96px / 2);
+    height: calc(96px / 2);
+    background-image:url("../img/minipictos.png");
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.minipicto-cloud{
+    background-position: 0 0;
+}
+.minipicto-sun{
+    background-position: calc(-116px / 2) 0;
+}
+.minipicto-rain{
+    background-position: calc(-232px / 2) 0;
+}
+
+.minipicto-suncloud{
+    background-position: calc(-348px / 2) 0;
+}
+.minipicto-thunder{
+    background-position: calc(-464px / 2) 0;
+}
+
+.minipicto-snow{
+    background-position: calc(-580px / 2) 0;
+}
+
+.bg-weather{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.bg-weather-sun{
+    background-image: url("../img/sun.jpg");
+}
+.bg-weather-suncloud{
+    background-image: url("../img/suncloud.jpg");
+}
+.bg-weather-cloud{
+    background-image: url("../img/cloud.jpg");
+}
+.bg-weather-rain{
+    background-image: url("../img/rain.jpg");
+}
+.bg-weather-snow{
+    background-image: url("../img/snow.jpg");   
+}
+.bg-weather-thunder{
+    background-image: url("../img/thunder.jpg");
+}
